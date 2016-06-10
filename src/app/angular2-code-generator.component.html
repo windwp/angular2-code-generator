@@ -1,3 +1,39 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+	<h1>angular 2 demo</h1>
+	<p>small tool for generate code use template</p>
+	<p>
+		<button (click)="sampleData()">sample data</button>
+	</p>
+</div>
+<div class="container">
+	<div class="form-group" *ngFor="let item of params;let i=index">
+		<label for="exampleInputEmail1">Param {{index+1}}</label>
+		<input type="text" class="form-control" [(ngModel)]="params[i]">
+	</div>
+	<div class="row">
+		<p>
+			<button (click)="params.push('');">
+			Add more param
+			</button>
+		</p>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-xs-6">
+			<div class="form-group">
+				<label for="input">input</label>
+				<textarea name="input" class="form-control" rows="20" [(ngModel)]="inputData"></textarea>
+			</div>
+		</div>
+		<div class="col-md-6 col-xs-6">
+			<div class="form-group ">
+				<label for="output">output</label>
+				<textarea name="output" class="form-control" [(ngModel)]="outputData" rows="20"></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-group">
+			<button (click)="convert()">Convert</button>
+		</div>
+	</div>
+</div>

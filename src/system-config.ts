@@ -42,10 +42,17 @@ declare var System: any;
 
 // Apply the CLI SystemJS configuration.
 System.config({
+  meta: {
+     'handlebars': {
+      exports: 'Handlebars',
+      format: 'global'
+    }
+  },
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
+    'handlebars': 'handlebars.js'
   },
   packages: cliSystemConfigPackages
 });
