@@ -19,9 +19,9 @@ export class Angular2CodeGeneratorAppComponent implements OnInit {
 		this.params.push('city,state,zip,neighborhood,yearbuilt,sqFootage,markeRent,depositRequired,keyNumber,keyLocation,bedrooms,bathrooms,amenity,appliance,utility');
 		this.params.push('City,State,Zip,Neighborhood,yearbuilt,sqfootage,markerent,depositrequired,keynumber,keylocation,bedrooms,bathrooms,amenity,appliance,utility');
 		this.inputData = `<ion-item [class.error]="!{{$1}}.valid && {{$1}}.touched">
-						    <ion-label>{{$2}}</ion-label>
-						    <ion-input ngControl="{{$1}}" type="text"></ion-input>
-						</ion-item>`;
+	<ion-label>{{$2}}</ion-label>
+	<ion-input ngControl="{{$1}}" type="text"></ion-input>
+</ion-item>`;
 	}
 
 	convert() {
